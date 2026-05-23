@@ -35,14 +35,14 @@ function Footer () {
           </div>
           <div className={styles.footer__social}>
 
-            <a href="https://www.instagram.com/PlaneByte/" target={'_blank'}>
+            <a href="https://www.instagram.com/planebyte" target={'_blank'}>
               <div className={styles.foooterIcon}>
                 <FaInstagram />
               </div>
             </a>
 
             <a
-              href="https://www.linkedin.com/company/PlaneByte-technology-solutions-private-limited"
+              href="https://www.linkedin.com/company/planebyte"
               target={'_blank'}
             >
               <div className={styles.foooterIcon}>
@@ -56,8 +56,8 @@ function Footer () {
             <h5>Contact Us</h5>
             <div>
               <b>Email: </b>
-              <a href="mailto:info@planebyte.com">
-                info@planebyte.com
+              <a href="mailto:rajendra@rpatel.tech">
+                rajendra@rpatel.tech
               </a>
             </div>
           </div>
