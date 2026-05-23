@@ -1,0 +1,333 @@
+.aboutPage{
+    background: #f7f9fc;
+    color: #15152f;
+}
+
+.hero{
+    min-height: 680px;
+    padding: 136px 5% 118px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, .82fr);
+    gap: 44px;
+    align-items: center;
+    background:
+        linear-gradient(120deg, rgba(10,0,87,.94), rgba(14,24,72,.9)),
+        url('../../public/images/bg-banner.png');
+    background-size: cover;
+    color: #fff;
+}
+
+.heroContent{
+    max-width: 760px;
+}
+
+.eyebrow{
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    background: rgba(0,206,124,.12);
+    color: #7DF0D8;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.hero h1{
+    margin-bottom: 18px;
+    font-size: clamp(2.35rem, 4.35vw, 4.15rem);
+    line-height: 1.08;
+    font-weight: 900;
+}
+
+.hero p,
+.sectionCopy p{
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero p{
+    max-width: 720px;
+    color: rgba(255,255,255,.82);
+}
+
+.heroActions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.primaryAction,
+.secondaryAction{
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.primaryAction{
+    background: var(--secondary);
+    color: #fff;
+    box-shadow: 0 18px 36px rgba(0,206,124,.24);
+}
+
+.secondaryAction{
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+}
+
+.primaryAction:hover{
+    background: #00b86f;
+    color: #fff !important;
+}
+
+.secondaryAction:hover{
+    background: #fff;
+    border-color: #fff;
+    color: #0A0057 !important;
+}
+
+.heroImage,
+.storyImage{
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 28px 70px rgba(0,0,0,.28);
+}
+
+.heroImage img,
+.storyImage img{
+    object-fit: cover;
+}
+
+.statsSection{
+    max-width: 1120px;
+    margin: -58px auto 70px;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.statsSection div{
+    padding: 24px;
+    border: 1px solid #e8edf5;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(16,24,40,.08);
+}
+
+.statsSection strong{
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.statsSection span{
+    color: #667085;
+    line-height: 1.6;
+}
+
+.storySection{
+    max-width: 1120px;
+    margin: 0 auto 58px;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+    align-items: center;
+}
+
+.sectionCopy h2,
+.sectionHeader h2,
+.founderCard h2{
+    margin-bottom: 16px;
+    color: #15152f;
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    line-height: 1.12;
+    font-weight: 900;
+}
+
+.sectionCopy p{
+    color: #667085;
+}
+
+.valuesSection{
+    padding: 62px 5%;
+    background: #fff;
+}
+
+.sectionHeader{
+    max-width: 760px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.valueGrid{
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.valueCard{
+    min-height: 240px;
+    padding: 24px;
+    border: 1px solid #e8edf5;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 16px 38px rgba(16,24,40,.08);
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.valueCard:hover{
+    transform: translateY(-10px);
+    border-color: rgba(0,206,124,.35);
+    box-shadow: 0 24px 54px rgba(16,24,40,.12);
+}
+
+.valueIcon{
+    margin-bottom: 18px;
+    color: var(--secondary);
+    font-size: 2.7rem;
+}
+
+.valueCard h3{
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.valueCard p{
+    color: #667085;
+    line-height: 1.65;
+}
+
+.founderSection{
+    padding: 62px 5%;
+    background:
+        linear-gradient(120deg, rgba(10,0,87,.96), rgba(14,24,72,.92)),
+        url('../../public/images/bg-banner.png');
+    background-size: cover;
+}
+
+.founderCard{
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 30px;
+    align-items: center;
+    padding: 34px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 12px;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    backdrop-filter: blur(12px);
+}
+
+.founderCard h2,
+.founderCard p{
+    color: #fff;
+}
+
+.founderCard p{
+    color: rgba(255,255,255,.78);
+    line-height: 1.7;
+}
+
+.founderCard strong{
+    color: #7DF0D8;
+}
+
+.founderImage{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+}
+
+@media only screen and (max-width: 992px){
+    .hero,
+    .storySection{
+        grid-template-columns: 1fr;
+    }
+
+    .hero{
+        min-height: 640px;
+        padding-top: 124px;
+        padding-bottom: 96px;
+    }
+
+    .heroImage,
+    .storyImage{
+        min-height: 340px;
+    }
+
+    .statsSection,
+    .valueGrid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .hero{
+        min-height: auto;
+        padding: 112px 16px 78px;
+    }
+
+    .hero p,
+    .sectionCopy p{
+        font-size: 16px;
+    }
+
+    .primaryAction,
+    .secondaryAction{
+        width: 100%;
+    }
+
+    .statsSection{
+        grid-template-columns: 1fr;
+        margin: -32px auto 44px;
+        padding: 0 16px;
+    }
+
+    .storySection{
+        margin-bottom: 48px;
+        padding: 0 16px;
+    }
+
+    .valuesSection,
+    .founderSection{
+        padding: 48px 16px;
+    }
+
+    .valueGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .valueCard{
+        min-height: auto;
+    }
+
+    .founderCard{
+        grid-template-columns: 1fr;
+        padding: 26px 20px;
+        text-align: center;
+    }
+
+    .founderImage{
+        margin: 0 auto;
+    }
+}

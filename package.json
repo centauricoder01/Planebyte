@@ -1,0 +1,30 @@
+{
+  "name": "planebyte.com",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check-node": "node -e \"const major = Number(process.versions.node.split('.')[0]); if (major < 20) { console.error('\\nThis project uses Next.js 16 and requires Node.js 20 or newer. Current version: ' + process.version + '.\\n'); process.exit(1); }\"",
+    "predev": "npm run check-node",
+    "dev": "next dev --webpack",
+    "prebuild": "npm run check-node",
+    "build": "next build --webpack",
+    "prestart": "npm run check-node",
+    "start": "next start -p 3000",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-icons": "^4.3.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6"
+  }
+}

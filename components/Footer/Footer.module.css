@@ -1,0 +1,150 @@
+.footerSection{
+    background: var(--darkPrimary);
+    background-image: url("../../public/images/codelinesbg.png"), url("../../public/images/codelinesMore.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    background-size: 266px, 335px;
+   margin: 0;
+   padding: 36px 5% 28px;
+   height: fit-content;
+   color: white;
+   position: relative;
+
+}
+
+.footerLogo{
+    background-color: white;
+    width: fit-content;
+    color: var(--darkPrimary);
+    padding: 5px;
+    vertical-align: middle;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footerLogoImage{
+    width: 240px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.footer__companyInfoHeader{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+
+.footer__info{
+    font-size: 15px;
+    color: lightgray;
+    font-family: 'Nunito Sans',sans-serif;
+    text-align: justify;
+}
+
+.footer__companyInfo{
+    width: 100%;
+    margin-right: 0;
+}
+
+.footer__social{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.link__area{
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(190px, .55fr) minmax(190px, .55fr);
+    gap: 36px;
+    margin: 54px auto 64px;
+    align-items: start;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+}
+
+.foooterIcon{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: var(--secondary) !important;
+}
+
+.foooterIcon:hover{
+    color: var(--darkSecondary);
+}
+
+.footer__links a{
+    margin-bottom: 3%;
+    font-size: 14px;
+    color: lightgray;
+}
+
+.footer__links a:hover{
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.footer__copyright{
+    text-align: center;
+    color: var(--secondary);
+    position: static;
+    width: 100%;
+    
+}
+
+.footer__address {
+    margin-top: 8%;
+}
+
+.footer__address b{
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+.footer__address address,.footer__address span,.footer__address a{
+    font-size: 15px;
+    color: lightgray;
+}
+
+.footer__address div{
+    margin-bottom: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .link__area{
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 34px;
+        margin-top: 42px;
+        margin-bottom: 40px;
+    }
+
+    .footer__companyInfo{
+        width: 100%;
+    }
+
+    .footer__links{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .footer__copyright{
+        position: static;
+        text-align: left;
+    }
+
+  
+  
+}
+  
