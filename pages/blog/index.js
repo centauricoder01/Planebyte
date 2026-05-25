@@ -5,19 +5,22 @@ import Footer from '../../components/Footer/Footer';
 import styles from './blog.module.css';
 import {BiSearchAlt2} from 'react-icons/bi';
 import {BsArrowRight} from 'react-icons/bs';
-import {blogData} from '../../util/blog';
 import BlogSeoTags from '../../components/Blog/BlogSeoTags';
+import {useI18n} from '../../lib/i18n';
 
 function Blog () {
+  const {t} = useI18n ();
+  const {posts} = t.blog;
+  const content = t.blog.list;
   const [searchText, setSearchText] = useState ('');
   const filteredBlogs = useMemo (() => {
     const query = searchText.trim ().toLowerCase ();
 
     if (!query) {
-      return blogData;
+      return posts;
     }
 
-    return blogData.filter (blog => {
+    return posts.filter (blog => {
       const searchableText = [
         blog.title,
         blog.description,
@@ -31,27 +34,27 @@ function Blog () {
 
       return searchableText.includes (query);
     });
-  }, [searchText]);
+  }, [posts, searchText]);
 
   return (
     <>
       <BlogSeoTags
-        title="PlaneByte Blog | Website Development & Digital Growth Insights"
-        description="Read practical PlaneByte articles on website development, online presence, business websites, SEO, and digital growth for business owners."
+        title={t.blog.seo.title}
+        description={t.blog.seo.description}
         path="/blog"
-        keywords="website development blog, business website tips, digital growth, online presence, website SEO"
+        keywords={t.blog.seo.keywords}
       />
       <Navbar />
       <main className={styles.blogPage}>
         <section className={styles.blogHero}>
-          <h1>PlaneByte Blog</h1>
+          <h1>{content.title}</h1>
           <div className={styles.blog__input}>
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder={content.searchPlaceholder}
               value={searchText}
               onChange={event => setSearchText (event.target.value)}
-              aria-label="Search blog articles"
+              aria-label={content.searchLabel}
             />
             <BiSearchAlt2 className={styles.searchIcon} />
           </div>
@@ -59,8 +62,11 @@ function Blog () {
 
         <section className={styles.blogListSection}>
           <div className={styles.blogListHeader}>
-            <h2>Latest Articles</h2>
-            <span>{filteredBlogs.length} article{filteredBlogs.length === 1 ? '' : 's'}</span>
+            <h2>{content.latest}</h2>
+            <span>
+              {filteredBlogs.length}{' '}
+              {filteredBlogs.length === 1 ? content.articleSingular : content.articlePlural}
+            </span>
           </div>
 
           <div className={styles.blog__cardGroup}>
@@ -80,7 +86,7 @@ function Blog () {
                   </div>
                   <Link legacyBehavior href={blog.link}>
                     <a className={styles.readMoreLink}>
-                      Read article <BsArrowRight />
+                      {content.readArticle} <BsArrowRight />
                     </a>
                   </Link>
                 </div>
@@ -90,8 +96,8 @@ function Blog () {
 
           {filteredBlogs.length === 0 && (
             <div className={styles.emptyState}>
-              <h3>No matching articles found</h3>
-              <p>Try searching for website, SEO, online presence, or custom website.</p>
+              <h3>{content.emptyTitle}</h3>
+              <p>{content.emptyText}</p>
             </div>
           )}
         </section>

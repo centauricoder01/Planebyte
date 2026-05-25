@@ -3,10 +3,28 @@ import logo from '../../public/planebyte-logo.png';
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import {FaInstagram, FaLinkedin} from 'react-icons/fa';
+import {useI18n} from '../../lib/i18n';
 
 function Footer () {
   const [year, setYear] = useState (2023);
+  const {t} = useI18n ();
+  const footer = t.common.footer;
+  const footerServiceLinks = [
+    {label: footer.serviceLinks[0], href: '/#services'},
+    {label: footer.serviceLinks[1], href: '/#services'},
+    {label: footer.serviceLinks[2], href: '/#services'},
+    {label: footer.serviceLinks[3], href: '/#services'},
+    {label: footer.serviceLinks[4], href: '/#services'},
+    {label: footer.serviceLinks[5], href: '/#services'},
+  ];
+  const footerOtherLinks = [
+    {label: footer.home, href: '/'},
+    {label: footer.blog, href: '/blog'},
+    {label: footer.terms, href: '/terms-and-conditions'},
+    {label: footer.privacy, href: '/privacy-policy'},
+  ];
+
   useEffect (() => {
     let now = new Date ();
     let year = now.getFullYear ();
@@ -26,12 +44,10 @@ function Footer () {
       </div>
       <div className={styles.link__area}>
         <div className={styles.footer__companyInfo}>
-          <h3>About Us</h3>
+          <h3>{footer.aboutTitle}</h3>
 
           <div className={styles.footer__info}>
-            <p>
-              PlaneByte is a technology services and consulting company helping small businesses build, scale, and shine in today&apos;s digital world.
-            </p>
+            <p>{footer.aboutText}</p>
           </div>
           <div className={styles.footer__social}>
 
@@ -53,9 +69,9 @@ function Footer () {
           </div>
 
           <div className={styles.footer__address}>
-            <h5>Contact Us</h5>
+            <h5>{footer.contactTitle}</h5>
             <div>
-              <b>Email: </b>
+              <b>{footer.emailLabel} </b>
               <a href="mailto:rajendra@rpatel.tech">
                 rajendra@rpatel.tech
               </a>
@@ -65,75 +81,28 @@ function Footer () {
         </div>
 
         <div className={styles.footer__links}>
-          <h5>Services</h5>
-          <Link legacyBehavior href="/#services">
-            <a>
-              Website Development
-            </a>
-          </Link>
-          <Link legacyBehavior href="/#services">
-            <a>
-              Mobile App Development
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/#services">
-            <a>
-              Machine Learning
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/#services">
-            <a>
-              Software Development
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/#services">
-            <a>
-              E-commerce Development
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/#services">
-            <a>
-              CMS Development
-            </a>
-          </Link>
+          <h5>{footer.servicesTitle}</h5>
+          {footerServiceLinks.map (link => (
+            <Link legacyBehavior href={link.href} key={link.label}>
+              <a>{link.label}</a>
+            </Link>
+          ))}
         </div>
 
         <div className={styles.footer__links}>
-          <h5>Other</h5>
-          <Link legacyBehavior href="/">
-            <a>
-              Home
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/blog">
-            <a>
-              Blog
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/terms-and-conditions">
-            <a>
-              Terms and Services
-            </a>
-          </Link>
-
-          <Link legacyBehavior href="/privacy-policy">
-            <a>
-              Privacy Policy
-            </a>
-          </Link>
+          <h5>{footer.otherTitle}</h5>
+          {footerOtherLinks.map (link => (
+            <Link legacyBehavior href={link.href} key={link.label}>
+              <a>{link.label}</a>
+            </Link>
+          ))}
 
         </div>
 
       </div>
       <div className={styles.footer__copyright}>
         <small>
-          &copy; 2023 - {year} PlaneByte Technology Solutions. All rights reserved.
+          &copy; 2023 - {year} {footer.copyright}
         </small>
       </div>
     </footer>

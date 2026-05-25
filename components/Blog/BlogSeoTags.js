@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import {useI18n} from '../../lib/i18n';
 
 const SITE_URL = 'https://www.planebyte.com';
 
@@ -12,7 +13,12 @@ function BlogSeoTags ({
   modifiedAt,
   readingTime,
 }) {
-  const url = `${SITE_URL}${path}`;
+  const {locale, t} = useI18n ();
+  const localizedPath = locale === 'de' ? `/de${path}` : path;
+  const alternatePath = path;
+  const localizedBlogPath = locale === 'de' ? '/de/blog' : '/blog';
+  const blogName = t.blog.list.title;
+  const localizedUrl = `${SITE_URL}${localizedPath}`;
   const schema = type === 'article'
     ? {
         '@context': 'https://schema.org',
@@ -21,7 +27,7 @@ function BlogSeoTags ({
         description,
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': url,
+          '@id': localizedUrl,
         },
         author: {
           '@type': 'Organization',
@@ -43,9 +49,9 @@ function BlogSeoTags ({
     : {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: 'PlaneByte Blog',
+        name: blogName,
         description,
-        url,
+        url: localizedUrl,
         publisher: {
           '@type': 'Organization',
           name: 'PlaneByte',
@@ -60,20 +66,20 @@ function BlogSeoTags ({
           {
             '@type': 'ListItem',
             position: 1,
-            name: 'Home',
+            name: t.blog.breadcrumb.home,
             item: SITE_URL,
           },
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Blog',
-            item: `${SITE_URL}/blog`,
+            name: t.blog.breadcrumb.blog,
+            item: `${SITE_URL}${localizedBlogPath}`,
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: title.replace (' | PlaneByte', ''),
-            item: url,
+            item: localizedUrl,
           },
         ],
       }
@@ -85,12 +91,16 @@ function BlogSeoTags ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={localizedUrl} />
+      <link rel="alternate" hrefLang="en" href={`${SITE_URL}${alternatePath}`} />
+      <link rel="alternate" hrefLang="de" href={`${SITE_URL}/de${alternatePath}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${alternatePath}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={localizedUrl} />
       <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
       <meta property="og:site_name" content="PlaneByte" />
+      <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

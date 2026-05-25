@@ -8,6 +8,7 @@ import contact from '../../public/images/contact.jpg';
 import {BsShare} from 'react-icons/bs';
 import {AiOutlineFileProtect} from 'react-icons/ai';
 import {MdOutlineMarkEmailRead} from 'react-icons/md';
+import {useI18n} from '../../lib/i18n';
 
 const CONTACT_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbzsYcO-VZmHiZa9CPWZiDSyhp2-PTI1y_Al0Ds_woEYSxK6zQyOMf2j8rNp4yCc8Qwf/exec';
@@ -38,6 +39,8 @@ const isValidPhoneNumber = value => {
 const isValidEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test (value.trim ());
 
 function ContactUs () {
+  const {t} = useI18n ();
+  const content = t.contact;
   const [formData, setFormData] = useState (initialFormData);
   const [formStatus, setFormStatus] = useState ({type: '', message: ''});
   const [formErrors, setFormErrors] = useState ({});
@@ -64,29 +67,29 @@ function ContactUs () {
     const errors = {};
 
     if (!formData.name.trim ()) {
-      errors.name = 'Required';
+      errors.name = content.validation.required;
     }
 
     if (!formData.email.trim ()) {
-      errors.email = 'Required';
+      errors.email = content.validation.required;
     } else if (!isValidEmail (formData.email)) {
-      errors.email = 'Please enter correct email.';
+      errors.email = content.validation.email;
     }
 
     if (!formData.country.trim ()) {
-      errors.country = 'Required';
+      errors.country = content.validation.required;
     }
 
     if (!formData.project_type.trim ()) {
-      errors.project_type = 'Required';
+      errors.project_type = content.validation.required;
     }
 
     if (!formData.message.trim ()) {
-      errors.message = 'Required';
+      errors.message = content.validation.required;
     }
 
     if (!isValidPhoneNumber (formData.number)) {
-      errors.number = 'Please enter correct number.';
+      errors.number = content.validation.phone;
     }
 
     return errors;
@@ -135,14 +138,12 @@ function ContactUs () {
       setFormData (initialFormData);
       setFormStatus ({
         type: 'success',
-        message:
-          'Thank you for sharing your project details. Our team will connect with you soon.',
+        message: content.status.success,
       });
     } catch (error) {
       setFormStatus ({
         type: 'error',
-        message:
-          'Something went wrong while sending your details. Please try again in a moment.',
+        message: content.status.error,
       });
     } finally {
       setIsSubmitting (false);
@@ -152,11 +153,11 @@ function ContactUs () {
   return (
     <div>
       <Head>
-        <title>Contact PlaneByte | Website & Digital Solution Development</title>
+        <title>{content.seo.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Contact PlaneByte to discuss custom website development, e-commerce websites, CMS solutions, and digital products for your business."
+          content={content.seo.description}
         />
       </Head>
       <Navbar />
@@ -167,106 +168,104 @@ function ContactUs () {
               <Image
                 src={contact}
                 placeholder="blur"
-                alt="PlaneByte team discussing a website project"
+                alt={content.hero.imageAlt}
                 fill
                 sizes="(max-width: 992px) 100vw, 42vw"
                 priority
               />
               <div className={styles.quickInfo}>
-                <span>Build a production ready site in 7 days only</span>
-                <strong>Let&apos;s shape your next website.</strong>
+                <span>{content.hero.quickNote}</span>
+                <strong>{content.hero.quickTitle}</strong>
               </div>
             </div>
             <div className={styles.contactFormPanel}>
-              <span className={styles.eyebrow}>Start a conversation</span>
-              <h1>Tell us what you want to build</h1>
-              <p>
-                Share a few details about your website, e-commerce store, CMS, or digital platform. We&apos;ll review it and suggest the best next step.
-              </p>
+              <span className={styles.eyebrow}>{content.hero.eyebrow}</span>
+              <h1>{content.hero.title}</h1>
+              <p>{content.hero.text}</p>
               {formStatus.type === 'success' ? (
                 <div className={styles.successPanel}>
                   <div className={styles.successIcon} />
-                  <h2>Thank you for sharing your project details.</h2>
-                  <p>Our team will connect with you soon.</p>
+                  <h2>{content.success.title}</h2>
+                  <p>{content.success.text}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
                   <div className={styles.formGrid}>
                     <div className={styles.formField}>
-                      {renderLabel ('Your Name', 'name', true)}
+                      {renderLabel (content.fields.name.label, 'name', true)}
                       <input
                         className={getFieldClassName ('name')}
                         name="name"
                         type="text"
-                        placeholder="e.g. John Doe"
+                        placeholder={content.fields.name.placeholder}
                         value={formData.name}
                         onChange={handleChange}
                       />
                     </div>
                     <div className={styles.formField}>
-                      {renderLabel ('Your Email', 'email', true)}
+                      {renderLabel (content.fields.email.label, 'email', true)}
                       <input
                         className={getFieldClassName ('email')}
                         name="email"
                         type="email"
-                        placeholder="e.g. john@gmail.com"
+                        placeholder={content.fields.email.placeholder}
                         value={formData.email}
                         onChange={handleChange}
                       />
                     </div>
                     <div className={styles.formField}>
-                      {renderLabel ('Your Organization', 'organization')}
+                      {renderLabel (content.fields.organization.label, 'organization')}
                       <input
                         className="form-control"
                         name="organization"
                         type="text"
-                        placeholder="e.g. PlaneByte"
+                        placeholder={content.fields.organization.placeholder}
                         value={formData.organization}
                         onChange={handleChange}
                       />
                     </div>
                     <div className={styles.formField}>
-                      {renderLabel ('Your Country', 'country', true)}
+                      {renderLabel (content.fields.country.label, 'country', true)}
                       <input
                         className={getFieldClassName ('country')}
                         name="country"
                         type="text"
-                        placeholder="e.g. USA"
+                        placeholder={content.fields.country.placeholder}
                         value={formData.country}
                         onChange={handleChange}
                       />
                     </div>
                     <div className={styles.formField}>
-                      {renderLabel ('Your Number', 'number')}
+                      {renderLabel (content.fields.number.label, 'number')}
                       <input
                         className={getFieldClassName ('number')}
                         name="number"
                         type="tel"
                         inputMode="tel"
-                        placeholder="e.g. +1 (415) 555-0134"
+                        placeholder={content.fields.number.placeholder}
                         value={formData.number}
                         onChange={handleChange}
                         aria-invalid={formErrors.number ? 'true' : undefined}
                       />
                     </div>
                     <div className={styles.formField}>
-                      {renderLabel ('Project Type', 'project_type', true)}
+                      {renderLabel (content.fields.projectType.label, 'project_type', true)}
                       <input
                         className={getFieldClassName ('project_type')}
                         name="project_type"
                         type="text"
-                        placeholder="Website, e-commerce, CMS, CRM..."
+                        placeholder={content.fields.projectType.placeholder}
                         value={formData.project_type}
                         onChange={handleChange}
                       />
                     </div>
                     <div className={`${styles.formField} ${styles.fullWidth}`}>
-                      {renderLabel ('Your Message', 'message', true)}
+                      {renderLabel (content.fields.message.label, 'message', true)}
                       <textarea
                         className={getFieldClassName ('message')}
                         name="message"
                         rows="5"
-                        placeholder="Tell us about your goals, timeline, required pages, and any must-have features."
+                        placeholder={content.fields.message.placeholder}
                         value={formData.message}
                         onChange={handleChange}
                       />
@@ -282,7 +281,7 @@ function ContactUs () {
                     className={styles.submitButton}
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Project Details'}
+                    {isSubmitting ? content.submit.sending : content.submit.idle}
                   </button>
                 </form>
               )}
@@ -292,10 +291,8 @@ function ContactUs () {
 
         <section className={styles.helpSection}>
           <div className={styles.helpSection__header}>
-            <h1>We're Here to Help You</h1>
-            <p>
-              We'll review your goals, clarify the scope, and suggest the best way to move your project forward.
-            </p>
+            <h1>{content.help.title}</h1>
+            <p>{content.help.text}</p>
 
           </div>
           <div className={styles.helpSection__card__group}>
@@ -306,10 +303,8 @@ function ContactUs () {
                     <BsShare className={styles.helpSection__card__icon} />
                   </div>
                   <div className="card-body">
-                    <h4>Share Your Requirements</h4>
-                    <p>
-                      We keenly analyze your requirements from the beginning for a seamless development process.
-                    </p>
+                    <h4>{content.help.cards[0].title}</h4>
+                    <p>{content.help.cards[0].text}</p>
                   </div>
                 </div>
               </div>
@@ -322,10 +317,8 @@ function ContactUs () {
                     />
                   </div>
                   <div className="card-body">
-                    <h4>Non Disclosure Agreement</h4>
-                    <p>
-                      Your business ideas are always safe with us. We assure you complete confidentiality with NDA
-                    </p>
+                    <h4>{content.help.cards[1].title}</h4>
+                    <p>{content.help.cards[1].text}</p>
                   </div>
                 </div>
               </div>
@@ -338,10 +331,8 @@ function ContactUs () {
                     />
                   </div>
                   <div className="card-body">
-                    <h4>Understanding Your Requirement</h4>
-                    <p>
-                      Once we have your requirement, we will allocate our expert team for consultation to choose the right approach.
-                    </p>
+                    <h4>{content.help.cards[2].title}</h4>
+                    <p>{content.help.cards[2].text}</p>
                   </div>
                 </div>
               </div>

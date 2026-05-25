@@ -91,6 +91,48 @@
     align-items: center;
 }
 
+.languageSwitch{
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(10, 0, 87, .18);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 10px 24px rgba(16, 24, 40, .08);
+    transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.languageSwitch:hover{
+    border-color: rgba(3, 211, 124, .72);
+    background: rgba(3, 211, 124, .08);
+    transform: translateY(-1px);
+}
+
+.languageIcon{
+    flex: 0 0 auto;
+    font-size: 18px;
+}
+
+.languageDivider{
+    width: 1px;
+    height: 16px;
+    background: rgba(10, 0, 87, .18);
+}
+
+.currentLanguage{
+    color: var(--green);
+}
+
+.nextLanguage{
+    color: var(--primary);
+}
+
 
 @media only screen and (max-width:700px){
     .projects{
@@ -128,13 +170,20 @@
     }
 
     .mobileMenu :global(.hidden){
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
         width: 100%;
         margin-top: 14px;
     }
 
     .mobileMenu :global(.hidden .primaryBtn){
         width: 100% !important;
+        justify-content: center;
+    }
+
+    .mobileMenu .languageSwitch{
+        width: 100%;
         justify-content: center;
     }
 }
