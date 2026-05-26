@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
@@ -36,6 +35,7 @@ import gaonikaProject from '../public/gaonika-s.png';
 import Footer from '../components/Footer/Footer';
 import ContactSection from '../components/ContactSection/ContactSection';
 import {useI18n} from '../lib/i18n';
+import SeoHead from '../components/SeoHead';
 
 const serviceHighlightIcons = [
   HiOutlineDesktopComputer,
@@ -98,7 +98,7 @@ const industryIcons = [
 
 export default function Home () {
   const [showAllIndustries, setShowAllIndustries] = useState (false);
-  const {locale, t} = useI18n ();
+  const {t} = useI18n ();
   const content = t.home;
   const {seo} = content;
   const visibleIndustries = showAllIndustries
@@ -107,20 +107,13 @@ export default function Home () {
 
   return (
     <>
-      <Head>
-        <title>{seo.title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content={seo.keywords} />
-        <meta name="description" content={seo.description} />
-        <link rel="canonical" href={seo.canonical} />
-        <link rel="alternate" hrefLang="en" href="https://www.planebyte.com/" />
-        <link rel="alternate" hrefLang="de" href="https://www.planebyte.com/de" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.planebyte.com/" />
-        <meta property="og:title" content={seo.title} />
-        <meta property="og:description" content={seo.ogDescription} />
-        <meta property="og:url" content={seo.ogUrl} />
-        <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
-      </Head>
+      <SeoHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogDescription={seo.ogDescription}
+        path="/"
+      />
       <header>
         <Navbar />
       </header>

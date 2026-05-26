@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /favicon.ico
+Allow: /planebyte-favicon.png
+
+Sitemap: https://planebyte.com/sitemap.xml

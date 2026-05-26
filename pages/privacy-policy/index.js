@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
+import SeoHead from '../../components/SeoHead';
 import {useI18n} from '../../lib/i18n';
 
 const renderBlock = block => {
@@ -28,10 +28,11 @@ function PrivacyPolicy () {
 
   return (
     <>
-      <Head>
-        <title>{content.seoTitle}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SeoHead
+        title={content.seoTitle}
+        description={content.seoDescription}
+        path="/privacy-policy"
+      />
       <Navbar />
       <div className="legal__hero text-white" style={{background: 'var(--primary)', padding: '5%'}}>
         <h2 className="text-center">{content.title}</h2>

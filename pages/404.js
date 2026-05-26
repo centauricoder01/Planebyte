@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import SeoHead from '../components/SeoHead';
 import styles from './404.module.css';
 import {
   BiArrowBack,
@@ -17,14 +17,12 @@ export default function Custom404 () {
 
   return (
     <>
-      <Head>
-        <title>{content.seo.title}</title>
-        <meta
-          name="description"
-          content={content.seo.description}
-        />
-        <meta name="robots" content="noindex, follow" />
-      </Head>
+      <SeoHead
+        title={content.seo.title}
+        description={content.seo.description}
+        path="/404"
+        noindex
+      />
       <Navbar />
       <main className={styles.notFoundPage}>
         <section className={styles.hero}>

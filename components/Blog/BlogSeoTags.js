@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import {useI18n} from '../../lib/i18n';
-
-const SITE_URL = 'https://www.planebyte.com';
+import {DEFAULT_SOCIAL_IMAGE, SITE_URL} from '../SeoHead';
 
 function BlogSeoTags ({
   title,
@@ -89,7 +88,8 @@ function BlogSeoTags ({
     <Head>
       <title>{title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content={description} />
+      <meta key="description" name="description" content={description} />
+      <meta key="robots" name="robots" content="index, follow" />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={localizedUrl} />
       <link rel="alternate" hrefLang="en" href={`${SITE_URL}${alternatePath}`} />
@@ -100,10 +100,12 @@ function BlogSeoTags ({
       <meta property="og:url" content={localizedUrl} />
       <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
       <meta property="og:site_name" content="PlaneByte" />
+      <meta property="og:image" content={DEFAULT_SOCIAL_IMAGE} />
       <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={DEFAULT_SOCIAL_IMAGE} />
       {type === 'article' && publishedAt && (
         <meta property="article:published_time" content={publishedAt} />
       )}

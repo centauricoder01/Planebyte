@@ -54,8 +54,8 @@ const en = {
         'PlaneByte creates custom business websites, e-commerce platforms, CMS solutions, and digital products that help companies attract customers and grow online.',
       ogDescription:
         'Build a customer-ready website, e-commerce platform, CMS, or digital product with PlaneByte.',
-      canonical: 'https://www.planebyte.com/',
-      ogUrl: 'https://www.planebyte.com/',
+      canonical: 'https://planebyte.com/',
+      ogUrl: 'https://planebyte.com/',
     },
     hero: {
       eyebrow: 'Innovative Digital Solutions',
@@ -838,11 +838,13 @@ const en = {
   legal: {
     privacy: {
       seoTitle: 'Privacy Policy - PlaneByte',
+      seoDescription:
+        'Read the PlaneByte privacy policy to understand how we handle website information, contact details, and privacy choices.',
       title: 'Privacy Policy',
       blocks: [
         {
           type: 'p',
-          text: 'PlaneByte, hereinafter referred as PlaneByte, we, us or our, is committed to respect your privacy and choices. The statement highlights our privacy practices regarding Personal Information that we collect and store about you through this website, https://www.planebyte.com/ (the Site) and also for those Personal Information that you provide us while participating in our events and campaigns.',
+          text: 'PlaneByte, hereinafter referred as PlaneByte, we, us or our, is committed to respect your privacy and choices. The statement highlights our privacy practices regarding Personal Information that we collect and store about you through this website, https://planebyte.com/ (the Site) and also for those Personal Information that you provide us while participating in our events and campaigns.',
         },
         {
           type: 'ul',
@@ -876,6 +878,8 @@ const en = {
     },
     terms: {
       seoTitle: 'Terms and Conditions - PlaneByte',
+      seoDescription:
+        'Read the PlaneByte terms and conditions for using our website, content, and digital service information.',
       title: 'Terms and Conditions',
       blocks: [
         {

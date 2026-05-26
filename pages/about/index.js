@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import ContactSection from '../../components/ContactSection/ContactSection';
+import SeoHead from '../../components/SeoHead';
 import styles from './about.module.css';
 import aboutImg from '../../public/images/aboutUs.jpg';
 import storyImg from '../../public/images/story.jpg';
@@ -21,14 +21,11 @@ function AboutUs () {
 
   return (
     <div className={styles.aboutPage}>
-      <Head>
-        <title>{content.seo.title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content={content.seo.description}
-        />
-      </Head>
+      <SeoHead
+        title={content.seo.title}
+        description={content.seo.description}
+        path="/about"
+      />
       <Navbar />
       <main>
         <section className={styles.hero}>

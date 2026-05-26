@@ -54,8 +54,8 @@ const de = {
         'PlaneByte erstellt individuelle Unternehmenswebsites, E-Commerce-Plattformen, CMS-Lösungen und digitale Produkte, die Unternehmen helfen, Kunden zu gewinnen und online zu wachsen.',
       ogDescription:
         'Entwickeln Sie mit PlaneByte eine kundenorientierte Website, E-Commerce-Plattform, ein CMS oder ein digitales Produkt.',
-      canonical: 'https://www.planebyte.com/de',
-      ogUrl: 'https://www.planebyte.com/de',
+      canonical: 'https://planebyte.com/de',
+      ogUrl: 'https://planebyte.com/de',
     },
     hero: {
       eyebrow: 'Innovative digitale Lösungen',
@@ -838,11 +838,13 @@ const de = {
   legal: {
     privacy: {
       seoTitle: 'Datenschutzerklärung - PlaneByte',
+      seoDescription:
+        'Lesen Sie die PlaneByte Datenschutzerklärung, um zu verstehen, wie wir Website-Informationen, Kontaktdaten und Datenschutzentscheidungen behandeln.',
       title: 'Datenschutzerklärung',
       blocks: [
         {
           type: 'p',
-          text: 'PlaneByte, im Folgenden PlaneByte, wir, uns oder unser genannt, respektiert Ihre Privatsphäre und Ihre Entscheidungen. Diese Erklärung beschreibt unsere Datenschutzpraktiken in Bezug auf personenbezogene Informationen, die wir über diese Website, https://www.planebyte.com/ (die Website), erfassen und speichern, sowie in Bezug auf personenbezogene Informationen, die Sie uns bei Veranstaltungen und Kampagnen bereitstellen.',
+          text: 'PlaneByte, im Folgenden PlaneByte, wir, uns oder unser genannt, respektiert Ihre Privatsphäre und Ihre Entscheidungen. Diese Erklärung beschreibt unsere Datenschutzpraktiken in Bezug auf personenbezogene Informationen, die wir über diese Website, https://planebyte.com/ (die Website), erfassen und speichern, sowie in Bezug auf personenbezogene Informationen, die Sie uns bei Veranstaltungen und Kampagnen bereitstellen.',
         },
         {
           type: 'ul',
@@ -876,6 +878,8 @@ const de = {
     },
     terms: {
       seoTitle: 'Allgemeine Geschäftsbedingungen - PlaneByte',
+      seoDescription:
+        'Lesen Sie die PlaneByte Geschäftsbedingungen zur Nutzung unserer Website, Inhalte und Informationen zu digitalen Leistungen.',
       title: 'Allgemeine Geschäftsbedingungen',
       blocks: [
         {

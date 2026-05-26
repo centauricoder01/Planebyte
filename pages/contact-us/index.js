@@ -3,7 +3,7 @@ import styles from './contactUs.module.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Image from 'next/image';
-import Head from 'next/head';
+import SeoHead from '../../components/SeoHead';
 import contact from '../../public/images/contact.jpg';
 import {BsShare} from 'react-icons/bs';
 import {AiOutlineFileProtect} from 'react-icons/ai';
@@ -152,14 +152,11 @@ function ContactUs () {
 
   return (
     <div>
-      <Head>
-        <title>{content.seo.title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content={content.seo.description}
-        />
-      </Head>
+      <SeoHead
+        title={content.seo.title}
+        description={content.seo.description}
+        path="/contact-us"
+      />
       <Navbar />
       <main className={styles.contactUs}>
         <section className={styles.contactSection}>

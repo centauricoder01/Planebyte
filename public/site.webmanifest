@@ -1,0 +1,14 @@
+{
+  "name": "PlaneByte",
+  "short_name": "PlaneByte",
+  "icons": [
+    {
+      "src": "/planebyte-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0A0057",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
