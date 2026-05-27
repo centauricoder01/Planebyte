@@ -1,12 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  i18n: {
-    locales: ['en', 'de'],
-    defaultLocale: 'en',
-    localeDetection: false,
+  // German/i18n routing is temporarily disabled while sitemap rendering is tested.
+  // i18n: {
+  //   locales: ['en', 'de'],
+  //   defaultLocale: 'en',
+  //   localeDetection: false,
+  // },
+  async redirects() {
+    return [
+      {
+        source: '/de',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/de/:path*',
+        destination: '/:path*',
+        permanent: false,
+      },
+    ];
   },
-  async headers () {
+  async headers() {
     return [
       {
         source: '/sitemap.xml',

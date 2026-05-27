@@ -13,16 +13,19 @@ function SeoHead ({
   type = 'website',
   noindex = false,
 }) {
-  const {locale} = useI18n ();
+  // German/i18n routing is temporarily disabled.
+  // const {locale} = useI18n ();
+  useI18n ();
   const normalizedPath = path === '/' ? '/' : path.replace (/\/$/, '');
-  const localizedPath = locale === 'de' && normalizedPath !== '/'
-    ? `/de${normalizedPath}`
-    : locale === 'de'
-      ? '/de'
-      : normalizedPath;
+  // const localizedPath = locale === 'de' && normalizedPath !== '/'
+  //   ? `/de${normalizedPath}`
+  //   : locale === 'de'
+  //     ? '/de'
+  //     : normalizedPath;
+  const localizedPath = normalizedPath;
   const canonicalUrl = `${SITE_URL}${localizedPath}`;
   const enUrl = `${SITE_URL}${normalizedPath}`;
-  const deUrl = `${SITE_URL}${normalizedPath === '/' ? '/de' : `/de${normalizedPath}`}`;
+  // const deUrl = `${SITE_URL}${normalizedPath === '/' ? '/de' : `/de${normalizedPath}`}`;
 
   return (
     <Head>
@@ -37,7 +40,7 @@ function SeoHead ({
       />
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang="en" href={enUrl} />
-      <link rel="alternate" hrefLang="de" href={deUrl} />
+      {/* <link rel="alternate" hrefLang="de" href={deUrl} /> */}
       <link rel="alternate" hrefLang="x-default" href={enUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={ogDescription || description} />
@@ -45,7 +48,7 @@ function SeoHead ({
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="PlaneByte" />
       <meta property="og:image" content={DEFAULT_SOCIAL_IMAGE} />
-      <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
+      <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={ogDescription || description} />

@@ -72,8 +72,8 @@ function Footer () {
             <h5>{footer.contactTitle}</h5>
             <div>
               <b>{footer.emailLabel} </b>
-              <a href="mailto:rajendra@rpatel.tech">
-                rajendra@rpatel.tech
+              <a href="mailto:contact@planebyte.com">
+                contact@planebyte.com
               </a>
             </div>
           </div>

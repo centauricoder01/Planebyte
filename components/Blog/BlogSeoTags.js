@@ -12,10 +12,14 @@ function BlogSeoTags ({
   modifiedAt,
   readingTime,
 }) {
-  const {locale, t} = useI18n ();
-  const localizedPath = locale === 'de' ? `/de${path}` : path;
+  // German/i18n routing is temporarily disabled.
+  // const {locale, t} = useI18n ();
+  const {t} = useI18n ();
+  // const localizedPath = locale === 'de' ? `/de${path}` : path;
+  const localizedPath = path;
   const alternatePath = path;
-  const localizedBlogPath = locale === 'de' ? '/de/blog' : '/blog';
+  // const localizedBlogPath = locale === 'de' ? '/de/blog' : '/blog';
+  const localizedBlogPath = '/blog';
   const blogName = t.blog.list.title;
   const localizedUrl = `${SITE_URL}${localizedPath}`;
   const schema = type === 'article'
@@ -93,7 +97,7 @@ function BlogSeoTags ({
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={localizedUrl} />
       <link rel="alternate" hrefLang="en" href={`${SITE_URL}${alternatePath}`} />
-      <link rel="alternate" hrefLang="de" href={`${SITE_URL}/de${alternatePath}`} />
+      {/* <link rel="alternate" hrefLang="de" href={`${SITE_URL}/de${alternatePath}`} /> */}
       <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${alternatePath}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -101,7 +105,7 @@ function BlogSeoTags ({
       <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
       <meta property="og:site_name" content="PlaneByte" />
       <meta property="og:image" content={DEFAULT_SOCIAL_IMAGE} />
-      <meta property="og:locale" content={locale === 'de' ? 'de_DE' : 'en_US'} />
+      <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
