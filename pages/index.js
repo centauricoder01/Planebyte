@@ -32,6 +32,7 @@ import {AiOutlineCalendar} from 'react-icons/ai';
 import gamingProject from '../public/gaming.png';
 import ryccaProject from '../public/rycca.png';
 import gaonikaProject from '../public/gaonika-s.png';
+import blissbriteProject from '../public/blissbrite.png';
 import Footer from '../components/Footer/Footer';
 import ContactSection from '../components/ContactSection/ContactSection';
 import {useI18n} from '../lib/i18n';
@@ -73,6 +74,10 @@ const projectAssets = [
   {
     image: gaonikaProject,
     href: 'https://www.gaonika.com',
+  },
+  {
+    image: blissbriteProject,
+    href: 'https://blissbrite.in',
   },
 ];
 

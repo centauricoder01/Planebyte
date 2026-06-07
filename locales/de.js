@@ -153,6 +153,11 @@ const de = {
           type: 'Website für Beauty und Kosmetik',
           imageAlt: 'Gaonika Beauty- und Kosmetik-Website',
         },
+        {
+          title: 'Bliss Brite',
+          type: 'Schulwebsite',
+          imageAlt: 'Bliss Brite Schulwebsite',
+        },
       ],
     },
     industries: {
