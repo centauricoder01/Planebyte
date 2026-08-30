@@ -17,8 +17,8 @@ const en = {
       toggle: 'Toggle navigation',
     },
     contactCta: {
-      eyebrow: 'We Carry more Than Just Good Coding Skills',
-      title: "Let's Build Your Software!",
+      eyebrow: 'We Carry more Than Just Good Coding and Marketing Skills',
+      title: "Let's Build and Grow Your Digital Presence!",
       button: 'Contact',
       imageAlt: 'PlaneByte project consultation background',
     },
@@ -36,6 +36,9 @@ const en = {
         'Software Development',
         'E-commerce Development',
         'CMS Development',
+        'Digital Marketing',
+        'SEO & Content',
+        'Paid Ads & Social Media',
       ],
       otherTitle: 'Other',
       home: 'Home',
@@ -47,21 +50,21 @@ const en = {
   },
   home: {
     seo: {
-      title: 'PlaneByte | Custom Website & Digital Solution Development',
+      title: 'PlaneByte | Website Development & Digital Marketing Services',
       keywords:
-        'custom website development, website development company, ecommerce website development, CMS development, CRM development, business website development, digital solutions, PlaneByte',
+        'custom website development, digital marketing services, SEO services, social media marketing, PPC campaigns, ecommerce website development, CMS development, CRM development, business website development, digital solutions, PlaneByte',
       description:
-        'PlaneByte creates custom business websites, e-commerce platforms, CMS solutions, and digital products that help companies attract customers and grow online.',
+        'PlaneByte creates custom business websites, e-commerce platforms, CMS solutions, SEO, paid ads, social media, and digital marketing campaigns that help companies attract customers and grow online.',
       ogDescription:
-        'Build a customer-ready website, e-commerce platform, CMS, or digital product with PlaneByte.',
+        'Build a customer-ready website and grow it with SEO, paid ads, social media, and measurable digital marketing campaigns.',
       canonical: 'https://planebyte.com/',
       ogUrl: 'https://planebyte.com/',
     },
     hero: {
-      eyebrow: 'Innovative Digital Solutions',
-      title: ['Empower Your Business', 'with Personalized', 'Solutions'],
+      eyebrow: 'Web Development & Digital Marketing',
+      title: ['Build Your Website', 'Grow Your Traffic', 'Win More Customers'],
       description:
-        'We help businesses turn ideas into reliable websites, apps, and digital platforms that attract customers, simplify daily work, and support long-term growth.',
+        'We help businesses turn ideas into reliable websites, apps, and digital platforms, then support growth with SEO, paid ads, social media, content, and conversion-focused marketing.',
       primaryAction: 'Explore Services',
       secondaryAction: 'Project Discussion',
       imageAlt: 'Laptop showing digital product work',
@@ -70,10 +73,11 @@ const en = {
       'Custom Website Development',
       'Software Development',
       'E-commerce Website Development',
+      'Digital Marketing & SEO',
     ],
     services: {
       eyebrow: 'Our Services',
-      title: 'We Offer a Wide Variety of IT Services',
+      title: 'We Offer Development and Digital Marketing Services',
       items: [
         {
           title: 'Website Development',
@@ -98,6 +102,18 @@ const en = {
         {
           title: 'Application Development',
           text: 'We carry more than just good coding skills. Our experience helps us deliver reliable cross-platform services.',
+        },
+        {
+          title: 'Digital Marketing',
+          text: 'We plan SEO, paid ads, social media, content, and landing page campaigns that bring more qualified leads to your business.',
+        },
+        {
+          title: 'SEO & Content',
+          text: 'We improve search visibility with technical SEO, keyword-focused pages, useful content, and local search optimization.',
+        },
+        {
+          title: 'Paid Ads & Social Media',
+          text: 'We manage growth campaigns across Google, Meta, and social platforms with clearer targeting, creatives, and reporting.',
         },
       ],
     },
@@ -129,9 +145,44 @@ const en = {
         },
         {
           title: 'Support & Growth',
-          text: 'After launch, we help with updates, improvements, new pages, and features as your business grows.',
+          text: 'After launch, we help with updates, SEO improvements, campaigns, new pages, and features as your business grows.',
         },
       ],
+    },
+    marketing: {
+      eyebrow: 'Digital Marketing & Growth',
+      title: 'Bring the Right People to the Website You Build',
+      description:
+        'A beautiful website still needs visibility, traffic, trust, and a clear conversion path. PlaneByte connects development and marketing so your online presence can attract, track, and convert better leads.',
+      action: 'Plan My Growth Strategy',
+      channels: [
+        {
+          title: 'SEO & Local Search',
+          text: 'Technical SEO, keyword-led pages, content planning, Google Business Profile support, and search-ready site structure.',
+        },
+        {
+          title: 'Paid Ads & PPC',
+          text: 'Google, Meta, and remarketing campaigns planned around leads, sales, audience quality, and responsible ad spend.',
+        },
+        {
+          title: 'Social Media Marketing',
+          text: 'Content calendars, profile optimization, creatives, reels direction, and campaign ideas for platforms your customers use.',
+        },
+        {
+          title: 'Analytics & Conversion',
+          text: 'GA4, tracking, landing pages, enquiry funnels, and reporting that shows what is working and what should improve next.',
+        },
+      ],
+      pipeline: {
+        label: 'Growth Pipeline',
+        title: 'One plan from traffic to enquiry',
+        steps: [
+          'Understand your audience, offer, competitors, and current online presence.',
+          'Prepare SEO pages, landing pages, tracking, and lead capture before campaigns scale.',
+          'Run search, social, and paid campaigns with regular optimization and reporting.',
+          'Improve conversions using data from forms, calls, clicks, rankings, and campaign results.',
+        ],
+      },
     },
     portfolio: {
       title: 'Our Portfolio',
@@ -164,7 +215,7 @@ const en = {
       eyebrow: 'Industries',
       title: 'Industries We Serve',
       description:
-        'We build business-ready websites and digital platforms for different industries, with layouts, content flow, and features shaped around each customer journey.',
+        'We build and market business-ready websites and digital platforms for different industries, with layouts, content flow, campaigns, and features shaped around each customer journey.',
       viewMore: 'View More',
       showLess: 'Show Less',
       items: [
@@ -192,12 +243,12 @@ const en = {
     seo: {
       title: 'About PlaneByte | Business Website Development Company',
       description:
-        'PlaneByte helps businesses build custom websites, e-commerce stores, CMS platforms, and digital solutions that support real growth.',
+        'PlaneByte helps businesses build custom websites, e-commerce stores, CMS platforms, and digital marketing systems that support real growth.',
     },
     hero: {
       eyebrow: 'About PlaneByte',
       title: 'Helping businesses look credible and grow online.',
-      text: 'PlaneByte helps business owners turn ideas into clean, responsive, customer-ready websites, e-commerce stores, CMS platforms, and digital solutions.',
+      text: 'PlaneByte helps business owners turn ideas into clean, responsive, customer-ready websites, e-commerce stores, CMS platforms, and digital marketing campaigns.',
       primaryAction: 'Discuss Your Project',
       secondaryAction: 'View Services',
       imageAlt: 'PlaneByte team planning a digital project',
@@ -205,7 +256,7 @@ const en = {
     stats: [
       {
         value: 'Custom',
-        text: 'Websites and digital platforms built around your business goals',
+        text: 'Websites, platforms, and campaigns built around your business goals',
       },
       {
         value: '17+',
@@ -213,15 +264,15 @@ const en = {
       },
       {
         value: 'Launch',
-        text: 'Clear planning, responsive development, testing, and support',
+        text: 'Clear planning, responsive development, testing, marketing, and support',
       },
     ],
     story: {
       eyebrow: 'Our Story',
       title: 'Built for business owners who need clarity, not confusion.',
       paragraphs: [
-        'PlaneByte was created to make digital development easier for businesses that want to launch, sell, manage content, or modernize the way they work.',
-        'From a first website to a custom platform, our goal is to help you understand what should be built, why it matters, and how it can support your next stage of growth.',
+        'PlaneByte was created to make digital growth easier for businesses that want to launch, sell, manage content, market better, or modernize the way they work.',
+        'From a first website to a custom platform or marketing campaign, our goal is to help you understand what should be built, why it matters, and how it can support your next stage of growth.',
       ],
       imageAlt: 'PlaneByte project discussion',
     },
@@ -244,22 +295,22 @@ const en = {
       },
       {
         title: 'Growth Ready',
-        text: 'We keep the structure flexible so you can add pages, content, and features as your business grows.',
+        text: 'We keep the structure flexible so you can add pages, content, campaigns, and features as your business grows.',
       },
     ],
     founder: {
       imageAlt: 'Rajendra Patel',
       eyebrow: 'Founder Note',
       title: 'Led with a practical, business-first mindset.',
-      text: 'Rajendra Patel leads PlaneByte with a focus on clear communication, thoughtful design, reliable development, and long-term support. The goal is simple: help business owners move from idea to launch with confidence.',
+      text: 'Rajendra Patel leads PlaneByte with a focus on clear communication, thoughtful design, reliable development, practical marketing, and long-term support. The goal is simple: help business owners move from idea to growth with confidence.',
       signature: 'Rajendra Patel, Founder',
     },
   },
   contact: {
     seo: {
-      title: 'Contact PlaneByte | Website & Digital Solution Development',
+      title: 'Contact PlaneByte | Website Development & Digital Marketing',
       description:
-        'Contact PlaneByte to discuss custom website development, e-commerce websites, CMS solutions, and digital products for your business.',
+        'Contact PlaneByte to discuss custom website development, e-commerce websites, CMS solutions, SEO, paid ads, social media marketing, and digital growth for your business.',
     },
     validation: {
       required: 'Required',
@@ -274,11 +325,11 @@ const en = {
     },
     hero: {
       imageAlt: 'PlaneByte team discussing a website project',
-      quickNote: 'Build a production ready site in 7 days only',
-      quickTitle: "Let's shape your next website.",
+      quickNote: 'Build, launch, and market with one focused team',
+      quickTitle: "Let's shape your next stage of growth.",
       eyebrow: 'Start a conversation',
       title: 'Tell us what you want to build',
-      text: "Share a few details about your website, e-commerce store, CMS, or digital platform. We'll review it and suggest the best next step.",
+      text: "Share a few details about your website, e-commerce store, CMS, app, SEO, paid ads, or social media goals. We'll review it and suggest the best next step.",
     },
     success: {
       title: 'Thank you for sharing your project details.',
@@ -307,12 +358,12 @@ const en = {
       },
       projectType: {
         label: 'Project Type',
-        placeholder: 'Website, e-commerce, CMS, CRM...',
+        placeholder: 'Website, e-commerce, SEO, ads, social media...',
       },
       message: {
         label: 'Your Message',
         placeholder:
-          'Tell us about your goals, timeline, required pages, and any must-have features.',
+          'Tell us about your goals, timeline, required pages, marketing channels, and any must-have features.',
       },
     },
     submit: {

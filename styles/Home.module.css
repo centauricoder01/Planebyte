@@ -39,13 +39,13 @@
 }
 
 .serveCard{
-  padding: 28px 78px 28px 30px;
+  padding: 26px 74px 26px 24px;
   border: 1px solid rgba(255,255,255,.18);
   box-shadow: 0 24px 50px rgba(6, 11, 36, .22);
-  width: 29%;
-  max-width: 380px;
-  min-height: 116px;
-  margin: 0 2%;
+  width: 22%;
+  max-width: 300px;
+  min-height: 122px;
+  margin: 0 1%;
   text-align: left;
   color: white;
   font-size: 1.08rem;
@@ -83,6 +83,11 @@
 .serveCard3{
   background-color: transparent;
   background-image: linear-gradient(120deg,#1D8A8A 0%,#41B883 100%);
+}
+
+.serveCard4{
+  background-color: transparent;
+  background-image: linear-gradient(120deg,#7B2C6D 0%,#E06B42 100%);
 }
 
 .serveCard__icon_wrapper{
@@ -390,6 +395,185 @@
   font-size: 15px;
   line-height: 1.65;
   margin: 0;
+}
+
+.marketingSection{
+  padding: 78px 5%;
+  background:
+    linear-gradient(180deg, rgba(245, 248, 255, .95), rgba(255,255,255,1)),
+    url('../public/images/whitebg.jpg');
+  background-size: cover;
+  color: #111827;
+}
+
+.marketingIntro{
+  max-width: 820px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.marketingIntro span{
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--secondary);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.marketingIntro h2{
+  margin-bottom: 16px;
+  color: #0A0057;
+  font-size: 2.45rem;
+  font-weight: 900;
+  font-family: 'Nunito Sans',sans-serif;
+}
+
+.marketingIntro p{
+  margin: 0;
+  color: #5b6472;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.marketingGrid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(330px, .65fr);
+  gap: 28px;
+  max-width: 1220px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.marketingCards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.marketingCard{
+  min-height: 248px;
+  padding: 26px;
+  border: 1px solid rgba(10,0,87,.09);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(16,24,40,.08);
+  transition: transform .26s ease, box-shadow .26s ease, border-color .26s ease;
+}
+
+.marketingCard:hover{
+  transform: translateY(-8px);
+  border-color: rgba(3, 211, 124, .34);
+  box-shadow: 0 26px 56px rgba(16,24,40,.13);
+}
+
+.marketingIcon{
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #0A0057, #19B7D8);
+  font-size: 28px;
+}
+
+.marketingCard h3{
+  color: #111827;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.marketingCard p{
+  color: #657184;
+  font-size: 15px;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.growthPanel{
+  min-height: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  background: #0E0B25;
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(14, 11, 37, .22);
+}
+
+.growthPanelHeader{
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.growthPanelHeader span{
+  display: block;
+  margin-bottom: 8px;
+  color: #7DF0D8;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.growthPanelHeader strong{
+  display: block;
+  font-size: 28px;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.growthSteps{
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.growthStep{
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.growthStep span{
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  color: var(--secondary);
+  font-weight: 900;
+}
+
+.growthStep p{
+  margin: 0;
+  color: rgba(255,255,255,.76);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.marketingAction{
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: var(--secondary);
+  color: #fff !important;
+  font-weight: 900;
+  text-align: center;
+  transition: transform .24s ease, background .24s ease;
+}
+
+.marketingAction:hover{
+  transform: translateY(-2px);
+  background: #00b86f;
+  color: #fff !important;
 }
 
 .aboutPreviewSection{
@@ -1154,7 +1338,8 @@
   }
 
   .serveCard{
-    width: 30%;
+    width: calc(50% - 9px);
+    max-width: 360px;
     min-width: 220px;
     margin: 0;
   }
@@ -1169,6 +1354,19 @@
 
   .workCycleGrid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .marketingSection{
+    padding: 68px 24px;
+  }
+
+  .marketingGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .growthPanel{
+    max-width: 720px;
+    margin: 0 auto;
   }
 
   .aboutPreviewSection{
@@ -1318,6 +1516,40 @@
   .workCycleGrid{
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .marketingSection{
+    padding: 54px 18px;
+  }
+
+  .marketingIntro{
+    margin-bottom: 28px;
+  }
+
+  .marketingIntro h2{
+    font-size: 1.9rem;
+  }
+
+  .marketingIntro p{
+    font-size: 15px;
+  }
+
+  .marketingCards{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .marketingCard{
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .growthPanel{
+    padding: 24px;
+  }
+
+  .growthPanelHeader strong{
+    font-size: 23px;
   }
 
   .workCycleCard{

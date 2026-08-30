@@ -65,17 +65,15 @@ function Navbar () {
   return (
     <nav ref={navRef} className="navbar navbar-expand-lg fixed-top navbar-light bg-light px-4">
       <div className="container-fluid">
-        <Link legacyBehavior href="/">
-          <a className="navbar-brand">
-            <Image
-              src={logo}
-              alt="PlaneByte"
-              className={styles.brandLogo}
-              width={180}
-              height={53}
-              priority
-            />
-          </a>
+        <Link href="/" className="navbar-brand">
+          <Image
+            src={logo}
+            alt="PlaneByte"
+            className={styles.brandLogo}
+            width={180}
+            height={53}
+            priority
+          />
         </Link>
         <button
           className="navbar-toggler"
@@ -97,49 +95,52 @@ function Navbar () {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li className="nav-item">
-              <Link legacyBehavior href="/#services">
-                <a className="nav-link" onClick={closeMobileMenu}>{t.common.nav.services}</a>
+              <a className="nav-link" href="/#services" onClick={closeMobileMenu}>
+                {t.common.nav.services}
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/#portfolio" onClick={closeMobileMenu}>
+                {t.common.nav.portfolio}
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="/#industries" onClick={closeMobileMenu}>
+                {t.common.nav.industries}
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <Link href="/about" className="nav-link" onClick={closeMobileMenu}>
+                {t.common.nav.about}
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link legacyBehavior href="/#portfolio">
-                <a className="nav-link" onClick={closeMobileMenu}>{t.common.nav.portfolio}</a>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link legacyBehavior href="/#industries">
-                <a className="nav-link" onClick={closeMobileMenu}>{t.common.nav.industries}</a>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link legacyBehavior href="/about">
-                <a className="nav-link" onClick={closeMobileMenu}>{t.common.nav.about}</a>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link legacyBehavior href="/blog">
-                <a className="nav-link" onClick={closeMobileMenu}>{t.common.nav.blog}</a>
+              <Link href="/blog" className="nav-link" onClick={closeMobileMenu}>
+                {t.common.nav.blog}
               </Link>
             </li>
 
           </ul>
           <div className="hidden">
             {/* {languageButton} */}
-            <Link legacyBehavior href="/contact-us">
-              <a className="primaryBtn" style={{width: '25%'}} onClick={closeMobileMenu}>
-                {t.common.nav.contact}
-              </a>
+            <Link
+              href="/contact-us"
+              className="primaryBtn"
+              style={{width: '25%'}}
+              onClick={closeMobileMenu}
+            >
+              {t.common.nav.contact}
             </Link>
           </div>
         </div>
         <div className="nav-contact">
           {/* {languageButton} */}
-          <Link legacyBehavior href="/contact-us">
-            <a className="primaryBtn" onClick={closeMobileMenu}>{t.common.nav.contact}</a>
+          <Link href="/contact-us" className="primaryBtn" onClick={closeMobileMenu}>
+            {t.common.nav.contact}
           </Link>
         </div>
       </div>

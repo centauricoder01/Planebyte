@@ -10,14 +10,10 @@ function Footer () {
   const [year, setYear] = useState (2023);
   const {t} = useI18n ();
   const footer = t.common.footer;
-  const footerServiceLinks = [
-    {label: footer.serviceLinks[0], href: '/#services'},
-    {label: footer.serviceLinks[1], href: '/#services'},
-    {label: footer.serviceLinks[2], href: '/#services'},
-    {label: footer.serviceLinks[3], href: '/#services'},
-    {label: footer.serviceLinks[4], href: '/#services'},
-    {label: footer.serviceLinks[5], href: '/#services'},
-  ];
+  const footerServiceLinks = footer.serviceLinks.map (label => ({
+    label,
+    href: '/#services',
+  }));
   const footerOtherLinks = [
     {label: footer.home, href: '/'},
     {label: footer.blog, href: '/blog'},
@@ -83,18 +79,14 @@ function Footer () {
         <div className={styles.footer__links}>
           <h5>{footer.servicesTitle}</h5>
           {footerServiceLinks.map (link => (
-            <Link legacyBehavior href={link.href} key={link.label}>
-              <a>{link.label}</a>
-            </Link>
+            <a href={link.href} key={link.label}>{link.label}</a>
           ))}
         </div>
 
         <div className={styles.footer__links}>
           <h5>{footer.otherTitle}</h5>
           {footerOtherLinks.map (link => (
-            <Link legacyBehavior href={link.href} key={link.label}>
-              <a>{link.label}</a>
-            </Link>
+            <Link href={link.href} key={link.label}>{link.label}</Link>
           ))}
 
         </div>

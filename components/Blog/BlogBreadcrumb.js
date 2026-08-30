@@ -9,13 +9,9 @@ function BlogBreadcrumb ({currentPage}) {
 
   return (
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <Link legacyBehavior href="/">
-        <a>{t.blog.breadcrumb.home}</a>
-      </Link>
+      <Link href="/">{t.blog.breadcrumb.home}</Link>
       <span>/</span>
-      <Link legacyBehavior href="/blog">
-        <a>{t.blog.breadcrumb.blog}</a>
-      </Link>
+      <Link href="/blog">{t.blog.breadcrumb.blog}</Link>
       <span>/</span>
       <span aria-current="page" title={currentPage}>{label}</span>
     </nav>

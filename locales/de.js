@@ -17,8 +17,8 @@ const de = {
       toggle: 'Navigation umschalten',
     },
     contactCta: {
-      eyebrow: 'Wir bieten mehr als nur gute Programmierkenntnisse',
-      title: 'Lassen Sie uns Ihre Software entwickeln!',
+      eyebrow: 'Wir bieten mehr als nur gute Programmier- und Marketingkenntnisse',
+      title: 'Lassen Sie uns Ihre digitale Präsenz aufbauen und wachsen lassen!',
       button: 'Kontakt',
       imageAlt: 'Hintergrund für eine PlaneByte Projektberatung',
     },
@@ -36,6 +36,9 @@ const de = {
         'Softwareentwicklung',
         'E-Commerce-Entwicklung',
         'CMS-Entwicklung',
+        'Digitales Marketing',
+        'SEO & Content',
+        'Anzeigen & Social Media',
       ],
       otherTitle: 'Weitere Seiten',
       home: 'Startseite',
@@ -47,21 +50,21 @@ const de = {
   },
   home: {
     seo: {
-      title: 'PlaneByte | Individuelle Website- und Digitalentwicklung',
+      title: 'PlaneByte | Website-Entwicklung & digitales Marketing',
       keywords:
-        'individuelle Website-Entwicklung, Website-Entwicklungsunternehmen, E-Commerce-Website-Entwicklung, CMS-Entwicklung, CRM-Entwicklung, Unternehmenswebsite-Entwicklung, digitale Lösungen, PlaneByte',
+        'individuelle Website-Entwicklung, digitales Marketing, SEO Services, Social Media Marketing, PPC Kampagnen, E-Commerce-Website-Entwicklung, CMS-Entwicklung, CRM-Entwicklung, Unternehmenswebsite-Entwicklung, digitale Lösungen, PlaneByte',
       description:
-        'PlaneByte erstellt individuelle Unternehmenswebsites, E-Commerce-Plattformen, CMS-Lösungen und digitale Produkte, die Unternehmen helfen, Kunden zu gewinnen und online zu wachsen.',
+        'PlaneByte erstellt individuelle Unternehmenswebsites, E-Commerce-Plattformen, CMS-Lösungen, SEO, Anzeigen, Social Media und digitale Marketingkampagnen, die Unternehmen helfen, Kunden zu gewinnen und online zu wachsen.',
       ogDescription:
-        'Entwickeln Sie mit PlaneByte eine kundenorientierte Website, E-Commerce-Plattform, ein CMS oder ein digitales Produkt.',
+        'Entwickeln Sie eine kundenorientierte Website und wachsen Sie mit SEO, Anzeigen, Social Media und messbaren digitalen Marketingkampagnen.',
       canonical: 'https://planebyte.com/de',
       ogUrl: 'https://planebyte.com/de',
     },
     hero: {
-      eyebrow: 'Innovative digitale Lösungen',
-      title: ['Stärken Sie Ihr Unternehmen', 'mit individuellen', 'Lösungen'],
+      eyebrow: 'Website-Entwicklung & digitales Marketing',
+      title: ['Website entwickeln', 'Traffic steigern', 'Mehr Kunden gewinnen'],
       description:
-        'Wir helfen Unternehmen, Ideen in zuverlässige Websites, Apps und digitale Plattformen zu verwandeln, die Kunden gewinnen, den Arbeitsalltag vereinfachen und langfristiges Wachstum unterstützen.',
+        'Wir helfen Unternehmen, Ideen in zuverlässige Websites, Apps und digitale Plattformen zu verwandeln und unterstützen Wachstum mit SEO, Anzeigen, Social Media, Content und konversionsorientiertem Marketing.',
       primaryAction: 'Leistungen ansehen',
       secondaryAction: 'Projekt besprechen',
       imageAlt: 'Laptop mit digitaler Produktarbeit',
@@ -70,10 +73,11 @@ const de = {
       'Individuelle Website-Entwicklung',
       'Softwareentwicklung',
       'E-Commerce-Website-Entwicklung',
+      'Digitales Marketing & SEO',
     ],
     services: {
       eyebrow: 'Unsere Leistungen',
-      title: 'Wir bieten ein breites Spektrum an IT-Leistungen',
+      title: 'Wir bieten Entwicklung und digitales Marketing',
       items: [
         {
           title: 'Website-Entwicklung',
@@ -98,6 +102,18 @@ const de = {
         {
           title: 'Anwendungsentwicklung',
           text: 'Wir bringen mehr mit als nur gute Programmierkenntnisse. Unsere Erfahrung hilft uns, zuverlässige plattformübergreifende Services zu liefern.',
+        },
+        {
+          title: 'Digitales Marketing',
+          text: 'Wir planen SEO, Anzeigen, Social Media, Content und Landingpage-Kampagnen, die Ihrem Unternehmen mehr qualifizierte Anfragen bringen.',
+        },
+        {
+          title: 'SEO & Content',
+          text: 'Wir verbessern die Sichtbarkeit in Suchmaschinen mit technischem SEO, keywordbasierten Seiten, hilfreichem Content und lokaler Suche.',
+        },
+        {
+          title: 'Anzeigen & Social Media',
+          text: 'Wir betreuen Wachstumskampagnen auf Google, Meta und Social-Plattformen mit klarerem Targeting, Creatives und Reporting.',
         },
       ],
     },
@@ -129,9 +145,44 @@ const de = {
         },
         {
           title: 'Support & Wachstum',
-          text: 'Nach dem Launch unterstützen wir Sie mit Updates, Verbesserungen, neuen Seiten und Funktionen, wenn Ihr Unternehmen wächst.',
+          text: 'Nach dem Launch unterstützen wir Sie mit Updates, SEO-Verbesserungen, Kampagnen, neuen Seiten und Funktionen, wenn Ihr Unternehmen wächst.',
         },
       ],
+    },
+    marketing: {
+      eyebrow: 'Digitales Marketing & Wachstum',
+      title: 'Bringen Sie die richtigen Menschen auf die Website, die Sie bauen',
+      description:
+        'Eine gute Website braucht Sichtbarkeit, Traffic, Vertrauen und einen klaren Weg zur Anfrage. PlaneByte verbindet Entwicklung und Marketing, damit Ihre Online-Präsenz bessere Leads gewinnen, messen und konvertieren kann.',
+      action: 'Wachstumsstrategie planen',
+      channels: [
+        {
+          title: 'SEO & lokale Suche',
+          text: 'Technisches SEO, keywordbasierte Seiten, Content-Planung, Google-Business-Unterstützung und suchfreundliche Website-Struktur.',
+        },
+        {
+          title: 'Paid Ads & PPC',
+          text: 'Google-, Meta- und Remarketing-Kampagnen, geplant rund um Leads, Verkäufe, Zielgruppenqualität und verantwortungsvolles Werbebudget.',
+        },
+        {
+          title: 'Social Media Marketing',
+          text: 'Content-Kalender, Profiloptimierung, Creatives, Reels-Richtung und Kampagnenideen für Plattformen, die Ihre Kunden nutzen.',
+        },
+        {
+          title: 'Analytics & Conversion',
+          text: 'GA4, Tracking, Landingpages, Anfrage-Funnels und Reporting, das zeigt, was funktioniert und was als Nächstes verbessert werden sollte.',
+        },
+      ],
+      pipeline: {
+        label: 'Growth Pipeline',
+        title: 'Ein Plan von Traffic bis Anfrage',
+        steps: [
+          'Zielgruppe, Angebot, Wettbewerber und aktuelle Online-Präsenz verstehen.',
+          'SEO-Seiten, Landingpages, Tracking und Lead-Erfassung vorbereiten, bevor Kampagnen skalieren.',
+          'Such-, Social- und Paid-Kampagnen mit regelmäßiger Optimierung und Reporting umsetzen.',
+          'Konversionen anhand von Formularen, Anrufen, Klicks, Rankings und Kampagnenergebnissen verbessern.',
+        ],
+      },
     },
     portfolio: {
       title: 'Unser Portfolio',
@@ -164,7 +215,7 @@ const de = {
       eyebrow: 'Branchen',
       title: 'Branchen, die wir betreuen',
       description:
-        'Wir entwickeln geschäftsorientierte Websites und digitale Plattformen für unterschiedliche Branchen, mit Layouts, Inhaltsstrukturen und Funktionen, die auf die jeweilige Kundenreise abgestimmt sind.',
+        'Wir entwickeln und vermarkten geschäftsorientierte Websites und digitale Plattformen für unterschiedliche Branchen, mit Layouts, Inhaltsstrukturen, Kampagnen und Funktionen, die auf die jeweilige Kundenreise abgestimmt sind.',
       viewMore: 'Mehr anzeigen',
       showLess: 'Weniger anzeigen',
       items: [
@@ -192,12 +243,12 @@ const de = {
     seo: {
       title: 'Über PlaneByte | Unternehmen für Business-Website-Entwicklung',
       description:
-        'PlaneByte hilft Unternehmen, individuelle Websites, E-Commerce-Shops, CMS-Plattformen und digitale Lösungen zu entwickeln, die echtes Wachstum unterstützen.',
+        'PlaneByte hilft Unternehmen, individuelle Websites, E-Commerce-Shops, CMS-Plattformen und digitale Marketingsysteme zu entwickeln, die echtes Wachstum unterstützen.',
     },
     hero: {
       eyebrow: 'Über PlaneByte',
       title: 'Wir helfen Unternehmen, online professionell aufzutreten und zu wachsen.',
-      text: 'PlaneByte hilft Geschäftsinhabern, Ideen in klare, responsive und kundenorientierte Websites, E-Commerce-Shops, CMS-Plattformen und digitale Lösungen zu verwandeln.',
+      text: 'PlaneByte hilft Geschäftsinhabern, Ideen in klare, responsive und kundenorientierte Websites, E-Commerce-Shops, CMS-Plattformen und digitale Marketingkampagnen zu verwandeln.',
       primaryAction: 'Projekt besprechen',
       secondaryAction: 'Leistungen ansehen',
       imageAlt: 'PlaneByte Team bei der Planung eines digitalen Projekts',
@@ -205,7 +256,7 @@ const de = {
     stats: [
       {
         value: 'Individuell',
-        text: 'Websites und digitale Plattformen, die auf Ihre Geschäftsziele abgestimmt sind',
+        text: 'Websites, Plattformen und Kampagnen, die auf Ihre Geschäftsziele abgestimmt sind',
       },
       {
         value: '17+',
@@ -213,15 +264,15 @@ const de = {
       },
       {
         value: 'Launch',
-        text: 'Klare Planung, responsive Entwicklung, Testing und Support',
+        text: 'Klare Planung, responsive Entwicklung, Testing, Marketing und Support',
       },
     ],
     story: {
       eyebrow: 'Unsere Geschichte',
       title: 'Entwickelt für Geschäftsinhaber, die Klarheit statt Verwirrung brauchen.',
       paragraphs: [
-        'PlaneByte wurde gegründet, um digitale Entwicklung für Unternehmen einfacher zu machen, die starten, verkaufen, Inhalte verwalten oder ihre Arbeitsweise modernisieren möchten.',
-        'Von der ersten Website bis zur individuellen Plattform ist unser Ziel, Ihnen verständlich zu machen, was gebaut werden sollte, warum es wichtig ist und wie es Ihre nächste Wachstumsphase unterstützen kann.',
+        'PlaneByte wurde gegründet, um digitales Wachstum für Unternehmen einfacher zu machen, die starten, verkaufen, Inhalte verwalten, besser vermarkten oder ihre Arbeitsweise modernisieren möchten.',
+        'Von der ersten Website bis zur individuellen Plattform oder Marketingkampagne ist unser Ziel, Ihnen verständlich zu machen, was gebaut werden sollte, warum es wichtig ist und wie es Ihre nächste Wachstumsphase unterstützen kann.',
       ],
       imageAlt: 'PlaneByte Projektbesprechung',
     },
@@ -244,22 +295,22 @@ const de = {
       },
       {
         title: 'Bereit für Wachstum',
-        text: 'Wir halten die Struktur flexibel, damit Sie Seiten, Inhalte und Funktionen ergänzen können, wenn Ihr Unternehmen wächst.',
+        text: 'Wir halten die Struktur flexibel, damit Sie Seiten, Inhalte, Kampagnen und Funktionen ergänzen können, wenn Ihr Unternehmen wächst.',
       },
     ],
     founder: {
       imageAlt: 'Rajendra Patel',
       eyebrow: 'Notiz des Gründers',
       title: 'Geführt mit einer praktischen, geschäftsorientierten Denkweise.',
-      text: 'Rajendra Patel führt PlaneByte mit Fokus auf klare Kommunikation, durchdachtes Design, zuverlässige Entwicklung und langfristigen Support. Das Ziel ist einfach: Geschäftsinhabern helfen, mit Vertrauen von der Idee zum Launch zu kommen.',
+      text: 'Rajendra Patel führt PlaneByte mit Fokus auf klare Kommunikation, durchdachtes Design, zuverlässige Entwicklung, praktisches Marketing und langfristigen Support. Das Ziel ist einfach: Geschäftsinhabern helfen, mit Vertrauen von der Idee zum Wachstum zu kommen.',
       signature: 'Rajendra Patel, Gründer',
     },
   },
   contact: {
     seo: {
-      title: 'Kontakt PlaneByte | Website- und Digitalentwicklung',
+      title: 'Kontakt PlaneByte | Website-Entwicklung & digitales Marketing',
       description:
-        'Kontaktieren Sie PlaneByte, um individuelle Website-Entwicklung, E-Commerce-Websites, CMS-Lösungen und digitale Produkte für Ihr Unternehmen zu besprechen.',
+        'Kontaktieren Sie PlaneByte, um individuelle Website-Entwicklung, E-Commerce-Websites, CMS-Lösungen, SEO, Anzeigen, Social Media Marketing und digitales Wachstum für Ihr Unternehmen zu besprechen.',
     },
     validation: {
       required: 'Pflichtfeld',
@@ -274,11 +325,11 @@ const de = {
     },
     hero: {
       imageAlt: 'PlaneByte Team bei der Besprechung eines Website-Projekts',
-      quickNote: 'Eine produktionsreife Website in nur 7 Tagen erstellen',
-      quickTitle: 'Lassen Sie uns Ihre nächste Website gestalten.',
+      quickNote: 'Aufbauen, starten und vermarkten mit einem fokussierten Team',
+      quickTitle: 'Lassen Sie uns Ihre nächste Wachstumsphase gestalten.',
       eyebrow: 'Gespräch starten',
       title: 'Erzählen Sie uns, was Sie bauen möchten',
-      text: 'Teilen Sie einige Details zu Ihrer Website, Ihrem E-Commerce-Shop, CMS oder Ihrer digitalen Plattform mit. Wir prüfen Ihre Angaben und empfehlen den besten nächsten Schritt.',
+      text: 'Teilen Sie einige Details zu Ihrer Website, Ihrem E-Commerce-Shop, CMS, Ihrer App, SEO, Anzeigen oder Social-Media-Zielen mit. Wir prüfen Ihre Angaben und empfehlen den besten nächsten Schritt.',
     },
     success: {
       title: 'Vielen Dank für Ihre Projektdetails.',
@@ -307,12 +358,12 @@ const de = {
       },
       projectType: {
         label: 'Projekttyp',
-        placeholder: 'Website, E-Commerce, CMS, CRM...',
+        placeholder: 'Website, E-Commerce, SEO, Anzeigen, Social Media...',
       },
       message: {
         label: 'Ihre Nachricht',
         placeholder:
-          'Beschreiben Sie Ihre Ziele, den Zeitplan, benötigte Seiten und wichtige Funktionen.',
+          'Beschreiben Sie Ihre Ziele, den Zeitplan, benötigte Seiten, Marketingkanäle und wichtige Funktionen.',
       },
     },
     submit: {

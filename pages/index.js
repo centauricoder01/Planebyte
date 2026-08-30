@@ -14,6 +14,8 @@ import {
   BsUiRadiosGrid,
   BsClockHistory,
   BsArrowRight,
+  BsGraphUp,
+  BsBarChartLine,
 } from 'react-icons/bs';
 import {GiHealthNormal} from 'react-icons/gi';
 import {
@@ -26,7 +28,7 @@ import {FaGamepad, FaGraduationCap, FaHotel, FaUsers} from 'react-icons/fa';
 import {RiMentalHealthLine, RiMoneyDollarCircleLine} from 'react-icons/ri';
 import {MdOutlinePermMedia} from 'react-icons/md';
 import {RiBankCardLine} from 'react-icons/ri';
-import {FaRegFileCode} from 'react-icons/fa';
+import {FaBullhorn, FaRegFileCode} from 'react-icons/fa';
 import {IoBulbOutline, IoFastFoodOutline} from 'react-icons/io5';
 import {AiOutlineCalendar} from 'react-icons/ai';
 import gamingProject from '../public/gaming.png';
@@ -42,6 +44,7 @@ const serviceHighlightIcons = [
   HiOutlineDesktopComputer,
   BsUiRadiosGrid,
   BsCartCheck,
+  FaBullhorn,
 ];
 
 const serviceIcons = [
@@ -51,6 +54,9 @@ const serviceIcons = [
   AiOutlineCloudServer,
   AiOutlineShoppingCart,
   BsUiRadiosGrid,
+  FaBullhorn,
+  BsGraphUp,
+  MdOutlinePermMedia,
 ];
 
 const workCycleIcons = [
@@ -60,6 +66,13 @@ const workCycleIcons = [
   BsClockHistory,
   AiOutlineCloudServer,
   BiSupport,
+];
+
+const marketingIcons = [
+  BsGraphUp,
+  FaBullhorn,
+  MdOutlinePermMedia,
+  BsBarChartLine,
 ];
 
 const projectAssets = [
@@ -178,7 +191,10 @@ export default function Home () {
           <h4>{content.services.eyebrow}</h4>
           <h2>{content.services.title}</h2>
         </div>
-        {[0, 3].map (startIndex => (
+        {Array.from (
+          {length: Math.ceil (content.services.items.length / 3)},
+          (_, rowIndex) => rowIndex * 3
+        ).map (startIndex => (
           <div className="row my-5" key={startIndex}>
             {content.services.items.slice (startIndex, startIndex + 3).map ((service, index) => {
               const Icon = serviceIcons[startIndex + index];
@@ -220,6 +236,48 @@ export default function Home () {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className={styles.marketingSection} id="digital-marketing">
+        <div className={styles.marketingIntro}>
+          <span>{content.marketing.eyebrow}</span>
+          <h2>{content.marketing.title}</h2>
+          <p>{content.marketing.description}</p>
+        </div>
+        <div className={styles.marketingGrid}>
+          <div className={styles.marketingCards}>
+            {content.marketing.channels.map ((channel, index) => {
+              const Icon = marketingIcons[index];
+
+              return (
+                <div className={styles.marketingCard} key={channel.title}>
+                  <div className={styles.marketingIcon}>
+                    <Icon />
+                  </div>
+                  <h3>{channel.title}</h3>
+                  <p>{channel.text}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles.growthPanel}>
+            <div className={styles.growthPanelHeader}>
+              <span>{content.marketing.pipeline.label}</span>
+              <strong>{content.marketing.pipeline.title}</strong>
+            </div>
+            <div className={styles.growthSteps}>
+              {content.marketing.pipeline.steps.map ((step, index) => (
+                <div className={styles.growthStep} key={step}>
+                  <span>{String (index + 1).padStart (2, '0')}</span>
+                  <p>{step}</p>
+                </div>
+              ))}
+            </div>
+            <Link legacyBehavior href="/contact-us">
+              <a className={styles.marketingAction}>{content.marketing.action}</a>
+            </Link>
+          </div>
         </div>
       </section>
 

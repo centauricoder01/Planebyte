@@ -25,8 +25,8 @@ function ContactSection () {
             <h2>{content.title}</h2>
           </div>
           <div className={styles.contactSection__btnArea}>
-            <Link legacyBehavior href="/contact-us">
-              <a className="btn btn-outline-light">{content.button}</a>
+            <Link href="/contact-us" className="btn btn-outline-light">
+              {content.button}
             </Link>
           </div>
         </div>
